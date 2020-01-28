@@ -28,7 +28,7 @@ Site.prototype.GetQuote = function(){
 
 		if(data.quoteType="MUTUALFUND"){
 			context.price = data.previousClose
-		}		
+		}
 
 		// call the request to load the chart and pass the data context with it.
 		that.LoadChart(context);
@@ -57,34 +57,34 @@ Site.prototype.RenderChart = function(data, quote){
 	var dates = [];
 
 	var title = quote.shortName  + " (" + quote.symbol + ") - " + numeral(quote.price).format('$0,0.00');
-	
+
 	for(var i in data.Close){
 		var dt = i.slice(0,i.length-3);
 		var dateString = moment.unix(dt).format("MM/YY");
 		var close = data.Close[i];
 		if(close != null){
-			priceData.push(data.Close[i]);	
+			priceData.push(data.Close[i]);
 			dates.push(dateString);
-		}		
+		}
 	}
-	
+
 	Highcharts.chart('chart_container', {
 		title: {
 			text: title
-		},	
+		},
 		yAxis: {
 			title: {
 				text: ''
 			}
-		},	
+		},
 		xAxis: {
 			categories :dates,
-		},	
+		},
 		legend: {
 			layout: 'vertical',
 			align: 'right',
 			verticalAlign: 'middle'
-		},	
+		},
 		plotOptions: {
 			series: {
 				label: {
@@ -93,13 +93,13 @@ Site.prototype.RenderChart = function(data, quote){
 			},
 			area: {
 			}
-		},	
+		},
 		series: [{
 			type: 'area',
 			color: '#85bb65',
 			name: 'Price',
 			data: priceData
-		}],	
+		}],
 		responsive: {
 			rules: [{
 				condition: {
@@ -114,7 +114,7 @@ Site.prototype.RenderChart = function(data, quote){
 				}
 			}]
 		}
-	
+
 	});
 
 };
