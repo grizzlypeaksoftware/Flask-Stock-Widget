@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,7 +26,18 @@
             </div>
           </header>
           <div id="widgetContent">
-
+            <main role="main" class="inner">
+              <h1 class="cover-heading">Financial Widget</h1>
+              <p class="lead">A Python and Flask based Stock Quote Module</p>
+              <p>This financial widget was built by creating a simple API using Python and Flask.  The HTML5 UI uses Bootstrap, jQuery and Highcharts.</p>
+              <div class="input-group mb-3">
+                <input id="symbol" type="text" class="form-control" placeholder="Enter Stock ETF or Mutual Fund Symbol" aria-label="Stock, ETF or Mutual Fund" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" onclick="site.SubmitForm();">Search</button>
+                </div>
+              </div>
+              <div id="chart_container"></div>
+            </main>
           </div>
           
           <footer class="mastfoot mt-auto">
@@ -48,7 +58,6 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.2/handlebars.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
 		<script src="https://code.highcharts.com/modules/exporting.js"></script>
 		<script src="https://code.highcharts.com/modules/export-data.js"></script>
@@ -58,20 +67,7 @@
 
     <script src="{{ url_for('static',    filename='scripts/site.js') }}"></script>
     
-    <script id="module_template" type="text/x-handlebars-template">
-        <main role="main" class="inner">
-            <h1 class="cover-heading">Financial Widget</h1>
-            <p class="lead">A Python and Flask based Stock Quote Module</p>
-            <p>This financial widget was built by creating a simple API using Python and Flask.  The HTML5 UI uses Bootstrap, Handlebars, jQuery and Highcharts.</p>
-            <div class="input-group mb-3">
-              <input id="symbol" type="text" class="form-control" placeholder="Enter Stock ETF or Mutual Fund Symbol" aria-label="Stock, ETF or Mutual Fund" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" onclick="site.SubmitForm();">Search</button>
-              </div>
-            </div>
-            <div id="chart_container"></div>
-        </main>
-    </script>
+  
 
   </body>
 </html>
