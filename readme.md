@@ -4,7 +4,7 @@ In this repo, we are going to make a quick and simple webpage using Python Flask
 
 This simple Python based microservice using Flask will returns stock quote and historical data. We'll also make a quick website using Flask's template system, called Jinja to make an easy Bootstrap 4 site.  The site will feature a graph of the stock's performance over the period of 12 months. 
 
-We'e going to use the fFinance module for Python.  This module uses the Yahoo Finance API to provide it's data. This API is publicly accessible, but not guaranteed to perform for long-term production use. 
+We'e going to use the yFinance module for Python.  This module uses the Yahoo Finance API to provide it's data. This API is publicly accessible, but not guaranteed to perform for long-term production use. 
 
 Just some history here.  Yahoo Finance used to provide a comma-separated, and later a JSON api in their YUI library that provided awesome and reliable stock quote data.  Unfortunately, the times changed and the classic Yahoo Finance API was taken out of prod.
 
