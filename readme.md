@@ -1,15 +1,20 @@
 ### Introduction
 
-Thank you for checking out my article in which we will build a simple Python based microservice API based using Flask that returns stock quote information. We will leverage Flask's template system to create a simple Bootstrap 4 website to create a historical graph of stock prices.
+In this repo, we are going to make a quick and simple webpage using Python Flask, jQuery and Bootstrap.  This is a simple back-end for freont-end style microservice, except that we're also hosting a single-page app with the same API.  
 
-We are going to use the yahoo-finance module for Python, which use the Yahoo Finance API to provide stock information. This API is publicly accessible, but not guaranteed to perform for production use. Nonetheless it will provide us with a great data source for our sample code.
+This simple Python based microservice using Flask will returns stock quote and historical data. We'll also make a quick website using Flask's template system, called Jinja to make an easy Bootstrap 4 site.  The site will feature a graph of the stock's performance over the period of 12 months. 
+
+We'e going to use the fFinance module for Python.  This module uses the Yahoo Finance API to provide it's data. This API is publicly accessible, but not guaranteed to perform for long-term production use. 
+
+Just some history here.  Yahoo Finance used to provide a comma-separated, and later a JSON api in their YUI library that provided awesome and reliable stock quote data.  Unfortunately, the times changed and the classic Yahoo Finance API was taken out of prod.
+
+Some awesome people have worked hard to provide this current Python lib for yFinance.  I checked out two or three of them, one for Node and another one for Python.  The one we're using in this code is the best one I could find at the time of this writing.  For now at least, it will provide us with a great data source for our sample Python code.
 
 ### Sample Code for this Project
 
-I have stored the code for this project in a git repository at the following location. [https://github.com/grizzlypeaksoftware/Flask-Stock-Widget](https://github.com/grizzlypeaksoftware/Flask-Stock-Widget "Flask Stock Market Widget Git Repo"). Please feel free to use the code in your projects!
+Thank you for checking out "OUR" code!  This is a public repository under the Apache License.  If you want to clone or fork the code to your local machine, by all means please do!  Thank you for looking at the code, and you're always welcoe to send a pull request if you want to make a change.
 
-If you want to clone the code to your local machine you will need to have git installed. Then you can navigate using your command line to the location where you would like to store the code and clone it to your machine.
-
+from command line...
 ```bash
 git clone https://github.com/grizzlypeaksoftware/Flask-Stock-Widget
 ```
