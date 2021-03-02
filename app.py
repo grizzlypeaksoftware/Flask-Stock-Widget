@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, jsonify
 import yfinance as yf
 
 # instantiate the Flask app.
@@ -15,7 +15,7 @@ def display_quote():
 	quote = yf.Ticker(symbol)
 
 	#return the object via the HTTP Response
-	return quote.info
+	return jsonify(quote.info)
 
 # API route for pulling the stock history
 @app.route("/history")
